@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Photo to Background</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Make Photo to Background</h1>
+    </header>
+    <main>
+        <div class="controls">
+            <input type="file" id="upload" accept="image/*">
+            <select id="backgroundSelect">
+                <option value="Background1.jpg">Background 1</option>
+                <option value="Background2.jpg">Background 2</option>
+                <option value="Background3.jpg">Background 3</option>
+            </select>
+            <br><br>
+            <label for="widthInput">Width: </label>
+            <input type="number" id="widthInput" placeholder="Enter width">
+            <label for="heightInput">Height: </label>
+            <input type="number" id="heightInput" placeholder="Enter height">
+            <br><br>
+            <label for="textInput">Text: </label>
+            <input type="text" id="textInput" placeholder="Enter text">
+            <button id="addTextBtn">Add Text</button>
+        </div>
+        <div class="canvas-container">
+            <canvas id="canvas"></canvas>
+        </div>
+        <button id="downloadBtn">Download Image</button>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

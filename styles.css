@@ -1,0 +1,98 @@
+/* Reset CSS untuk menghindari perbedaan default antar browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centering main content */
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+canvas {
+    border: 2px solid #333;
+    max-width: 100%; /* Ensure canvas resizes on smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    position: relative; /* For absolute positioning of text */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px; /* Add rounded corners for better aesthetics */
+    margin: 10px 0; /* Space above and below the button */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsif CSS */
+@media (max-width: 768px) {
+    .controls {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .controls label,
+    .controls input,
+    .controls select {
+        margin: 5px 0;
+    }
+
+    canvas {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    header {
+        padding: 10px 0;
+    }
+}
+
+/* Styling untuk teks */
+.text {
+    position: absolute;
+    cursor: move;
+    color: #000;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
